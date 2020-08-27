@@ -1,12 +1,14 @@
 ## 训练
 环境配置：python3.6 + pytorch0.4.1，更详细的环境配置内容及可能遇到的bug，可参考[PPDM](https://km.sankuai.com/space/~fengqi06 "PPDM")。
-公开数据集HICO-DET上的训练：
-···Bash
-cd src
-python main.py  hoidet --batch_size 32 --lr 5e-4 --gpus 0,1  --num_workers 16  --load_model ../models/ctdet_coco_dla_2x.pth --image_dir images/train2015 --dataset hico --exp_id hoidet_hico_dlapython main.py  hoidet --batch_size 32 --lr 5e-4 --gpus 0,1  --num_workers 16  --load_model ../models/ctdet_coco_dla_2x.pth --image_dir images/train2015 --dataset hico --exp_id hoidet_hico_dla
-···
 
-说明：--load_model：选择的模型backbone，可选择（Res18，DLA34，Hourglass104）, 模型放在models文件夹下。其中Hourglass104效果最佳；在使用DLA34的时候发现测试速度很慢，可尝试升级至pytorch1.0
+公开数据集HICO-DET上的训练：
+
+
+    cd src
+    python main.py  hoidet --batch_size 32 --lr 5e-4 --gpus 0,1  --num_workers 16  --load_model ../models/ctdet_coco_dla_2x.pth --image_dir images/train2015 --dataset hico --exp_id hoidet_hico_dla
+
+说明：
+--load_model：选择的模型backbone，可选择（Res18，DLA34，Hourglass104）, 模型放在models文件夹下。其中Hourglass104效果最佳；在使用DLA34的时候发现测试速度很慢，可尝试升级至pytorch1.0
 -- exp_id：训练结果保存地址
 --image_dir：数据集文件名，里面包含所有的图片，放在Dataset文件夹下
 
