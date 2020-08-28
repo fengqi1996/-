@@ -46,6 +46,8 @@
 ## 可视化
 根据模型输出结果保存的json文件，对输出结果进行可视化，/visual/visual.py
 
+有一个file_name.json，按类别对测试集上的文件划分，可以执行/visual/visual2.py输出各个类别的可视化结果
+
 ## json文件生成
 
 生成符合输入要求的json文件格式，/visual/build_annotation.py
