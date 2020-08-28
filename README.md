@@ -42,3 +42,10 @@
     python test_hoi.py hoidet --exp_id hotelcleaning_hg_v2/data_v2_pretrain_hoi --load_model ../../PPDM-master/exp/hoidet/hotelcleaning_hg_v2/data_v2_pretrain_hoi/model_best.pth --gpus 0 --dataset hoia --image_dir Hotel_20200509_images_v1 --arch hourglass --test_with_eval --test_data test_hotel_v2.json
 
 --test_data：测试数据集json文件
+
+## 可视化
+根据模型输出结果保存的json文件，对输出结果进行可视化，/visual/visual.py
+
+## json文件生成
+
+生成符合输入要求的json文件格式，/visual/build_annotation.py
